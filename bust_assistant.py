@@ -89,7 +89,7 @@ def query_ollama(prompt):
     return response.json().get("response", "Error: No response from Ollama")
 
 # Streamlit UI
-st.title("📘 Business Education AI Assistant")
+st.title("Business Education AI Assistant")
 st.markdown("Ask a question, or upload PDFs to analyze and query from.")
 
 # State management for uploaded files
@@ -123,10 +123,10 @@ if user_query:
         prompt = construct_prompt(user_query, context)
         answer = query_ollama(prompt)
 
-    st.subheader("📖 Answer")
+    st.subheader("Answer")
     st.write(answer)
 
-    with st.expander("🧠 Retrieved Context"):
+    with st.expander("Retrieved Context"):
         st.write(context)
 
 
